@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -57,13 +57,22 @@ const Hero = () => {
               solutions. I enjoy transforming ideas into impactful web
               applications and always seek new challenges to grow.
             </p>
-            <a href="#about">
-              <MagicButton
-                title="Show my work"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
-            </a>
+            <div className="flex flex-row gap-4">
+              <a href="/houssem labidi - CV.pdf" download>
+                <MagicButton
+                  title="Download my CV"
+                  icon={<FaDownload />}
+                  position="right"
+                />
+              </a>
+              <a href="#about">
+                <MagicButton
+                  title="Show my work"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+            </div>
           </div>
           {/* Right: Image */}
           <div className="flex-1 flex justify-center md:justify-end items-center">

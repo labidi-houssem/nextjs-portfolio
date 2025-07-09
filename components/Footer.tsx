@@ -38,14 +38,45 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
-          ))}
+          {socialMedia.map((info) =>
+            info.img === "/link.svg" ? (
+              <a
+                key={info.id}
+                href="https://www.linkedin.com/in/houssem-labidi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <img src={info.img} alt="icons" width={20} height={20} />
+              </a>
+            ) : info.img === "/git.svg" ? (
+              <a
+                key={info.id}
+                href="https://github.com/labidi-houssem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <img src={info.img} alt="icons" width={20} height={20} />
+              </a>
+            ) : info.img === "/twit.svg" ? (
+              <a
+                key={info.id}
+                href="https://www.facebook.com/houssem.alabidi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <img src={"/fb1.svg"} alt="facebook" width={20} height={20} />
+              </a>
+            ) : (
+              <a
+                key={info.id}
+                href="https://www.facebook.com/houssem.alabidi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
+                <img src={info.img} alt="icons" width={20} height={20} />
+              </a>
+            )
+          )}
         </div>
       </div>
     </footer>
