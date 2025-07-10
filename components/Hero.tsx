@@ -66,7 +66,7 @@ const Hero = () => {
               applications and always seek new challenges to grow.
             </p>
             <div className="flex flex-row gap-4">
-              <a href="/houssem labidi - CV.pdf" download>
+              <a href="/cv -houssem labidi.pdf" download>
                 <MagicButton
                   title="Download my CV"
                   icon={<FaDownload />}
